@@ -1,0 +1,9 @@
+---
+- hosts: linux
+  gather_facts: true
+  tasks:
+    - debug:
+        var: hostvars.keys()
+
+    - set_stats:
+       output: "{{ hostvars }}" 
