@@ -6,4 +6,6 @@
         var: hostvars.keys()
 
     - set_stats:
-       output: "{{ hostvars }}" 
+        data:
+          output: "{{ hostvars }}" 
+          "{{ inventory_hoatname_short }}": "{{ hostvars[inventory_hostname_short] }}"
